@@ -37,6 +37,9 @@ libssl-dev:
 python-dev:
     build-only: true
 
+python39-devel:
+    when: IPA_DISTRO_FAMILY = rh
+
 # The base minimum element uninstalls firmware, but it's needed for bare metal.
 linux-firmware:
   phase: post-install.d
